@@ -1,4 +1,10 @@
-#!/bin/bashFunction to update setuptools and pipupdate_setuptools_and_pip() { echo "Updating setuptools..." sudo easy_install3 -U pip }Function to upgrade requests libraryupgrade_requests_library() { echo "Upgrading requests library..." sudo pip3 install requests --upgrade }Function to install requests[socks]install_requests_socks() { echo "Installing requests[socks]..." sudo pip3 install requests[socks] }Function to install stem libraryinstall_stem_library() { echo "Installing stem library..." sudo pip3 install stem }$ sudo easy_install3 -U pip # you have to install python3-setuptools , update pip
+[+]--Now you need internet connection to continue further process...
+
+[+]--You can select any option by clicking on your keyboard
+
+[+]--Note:- Don't delete any of the scripts included in core files
+
+[+]--new session and start TOR (tor) before starting the attack#!/bin/bashFunction to update setuptools and pipupdate_setuptools_and_pip() { echo "Updating setuptools..." sudo easy_install3 -U pip }Function to upgrade requests libraryupgrade_requests_library() { echo "Upgrading requests library..." sudo pip3 install requests --upgrade }Function to install requests[socks]install_requests_socks() { echo "Installing requests[socks]..." sudo pip3 install requests[socks] }Function to install stem libraryinstall_stem_library() { echo "Installing stem library..." sudo pip3 install stem }$ sudo easy_install3 -U pip # you have to install python3-setuptools , update pip
 $ sudo pip3 install requests --upgrade
 $ sudo pip3 install requests[socks]
 $ sudo pip3 install stem add #!/bin/bash
