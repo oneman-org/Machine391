@@ -108,7 +108,7 @@ perform_osint_with_recon_ng() {
 }
 
 # Function to perform OSINT using theHarvester
-perform_osint_with_theharvester() {
+perform_osint_with_()theHarvester{
     echo "=== Performing OSINT using theHarvester ==="
     theharvester
 }
