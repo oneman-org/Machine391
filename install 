@@ -1,4 +1,36 @@
-[+]--Now you need internet connection to continue further process...
+# Generate a password with default settings (length=14, include all)
+curl --request GET \
+	--url https://securepassgen-api-ultimate-online-password-generator.p.rapidapi.com/api/generate-password \
+	--header 'X-RapidAPI-Host: securepassgen-api-ultimate-online-password-generator.p.rapidapi.com' \
+	--header 'X-RapidAPI-Key: YOUR_API_KEY'
+
+# Generate a password with custom settings
+curl --request GET \
+	--url https://securepassgen-api-ultimate-online-password-generator.p.rapidapi.com/api/generate-password?length=16&include_uppercase=true&include_digits=true&exclude_similar_chars=true \
+	--header 'X-RapidAPI-Host: securepassgen-api-ultimate-online-password-generator.p.rapidapi.com' \
+	--header 'X-RapidAPI-Key: YOUR_API_KEY'# Generate a password with default settings (length=14, include all)
+import requests
+
+url = "https://securepassgen-api-ultimate-online-password-generator.p.rapidapi.com/api/generate-password"
+
+headers = {
+	"X-RapidAPI-Key": "YOUR_API_KEY",
+	"X-RapidAPI-Host": "securepassgen-api-ultimate-online-password-generator.p.rapidapi.com"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.json())// Generate a password with default settings (length=14, include all)
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://securepassgen-api-ultimate-online-password-generator.p.rapidapi.com/api/generate-password",
+    "method": "GET",
+    "headers": {
+        "X-RapidAPI-Host": "securepassgen-api-ultimate-online-password-generator.p.rapidapi.com",
+        "X-RapidAPI-Key": "YOUR_API_KEY"
+    }
+}git clone https://github.com/evildevill/passgen-flask.gitcd passgen-flaskpip install -r requirements.txtpython app.py[+]--Now you need internet connection to continue further process...
 
 [+]--You can select any option by clicking on your keyboard
 
