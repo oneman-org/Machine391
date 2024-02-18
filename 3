@@ -2309,4 +2309,92 @@ main() {
 }
 
 # Execute the main function
+main# Main function to execute the script
+main() {
+    while true; do
+        display_menu
+        read -p "Enter your choice (1-7): " choice
+        case $choice in
+            1)
+                # Call the sample API and process the data
+                api_data=$(call_sample_api "data")
+                process_data "$api_data"
+                ;;
+            2)
+                # Read data from a file
+                read_from_file "input.txt"
+                ;;
+            3)
+                # Write data to a file
+                api_data=$(call_sample_api "data")
+                write_to_file "$api_data" "output.txt"
+                ;;
+            4)
+                # Read payload from a file
+                read_payload "payload.txt"
+                ;;
+            5)
+                # Write payload to a file
+                payload=$(read_payload "payload.txt")
+                write_payload "$payload" "output_payload.txt"
+                ;;
+            6)
+                # Clone a Git repository
+                echo "Select a malicious Git repository to clone:"
+                for ((i=0; i<${#malicious_repos[@]}; i++)); do
+                    echo "$((i+1)). ${malicious_repos[i]}"
+                done
+                read -p "Enter the repository number to clone: " repo_number
+                if [[ "$repo_number" =~ ^[1-${#malicious_repos[@]}]$ ]]; then
+                    read -p "Enter the destination directory: " destination
+                    clone_repository "${malicious_repos[repo_number-1]}" "$destination"
+                else
+                    echo "Invalid repository number."
+                fi
+                ;;
+            7)
+                # Exit the script
+                echo "Exiting..."
+                exit 0
+                ;;
+            *)
+                echo "Invalid input: Please enter a number between 1 and 7."
+                ;;
+        esac
+    done
+}#!/bin/bash
+
+# Function to update setuptools and pip
+update_setuptools_and_pip() {
+    echo "Updating setuptools..."
+    sudo easy_install3 -U pip
+}
+
+# Function to upgrade requests library
+upgrade_requests_library() {
+    echo "Upgrading requests library..."
+    sudo pip3 install requests --upgrade
+}
+
+# Function to install requests[socks]
+install_requests_socks() {
+    echo "Installing requests[socks]..."
+    sudo pip3 install requests[socks]
+}
+
+# Function to install stem library
+install_stem_library() {
+    echo "Installing stem library..."
+    sudo pip3 install stem
+}
+
+# Main function to execute the script
+main() {
+    update_setuptools_and_pip
+    upgrade_requests_library
+    install_requests_socks
+    install_stem_library
+}
+
+# Execute the main function
 main
